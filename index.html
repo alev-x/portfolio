@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алексей | Портфолио</title>
+    <!-- Шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome для иконок (опционально) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__logo">Alexey</div>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li><a href="#home" class="nav__link">Главная</a></li>
+                    <li><a href="#about" class="nav__link">Обо мне</a></li>
+                    <li><a href="#projects" class="nav__link">Проекты</a></li>
+                    <li><a href="#demos" class="nav__link">Демо</a></li>
+                    <li><a href="#contact" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <button class="header__burger" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section id="home" class="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Привет, я Алексей</h1>
+                    <p class="hero__subtitle">Начинающий фронтенд-разработчик, учу японский и мечтаю о переезде</p>
+                    <a href="#projects" class="btn btn--primary">Смотреть работы</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- О себе -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">Обо мне</h2>
+                <div class="about__content">
+                    <div class="about__text">
+                        <p>Мне 34, живу в зоне, где непросто, но я продолжаю учиться и развиваться. Изучаю фронтенд, японский язык, работаю в энергетике. Мечтаю создать свой "сад изящных слов" и переехать жить в Японию.</p>
+                        <p>Это портфолио — мой первый самостоятельный проект. Здесь я буду выкладывать примеры своих работ, решения на JavaScript, вёрстку и маленькие компоненты.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Навыки -->
+        <section class="skills">
+            <div class="container">
+                <h2 class="section-title">Навыки</h2>
+                <div class="skills__grid">
+                    <div class="skill-card">HTML5</div>
+                    <div class="skill-card">CSS3 / Flexbox / Grid</div>
+                    <div class="skill-card">JavaScript (основы)</div>
+                    <div class="skill-card">Git / GitHub</div>
+                    <div class="skill-card">Адаптивная вёрстка</div>
+                    <div class="skill-card">Японский (начальный)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Проекты -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Проекты</h2>
+                <div class="projects__grid">
+                    <!-- Карточка проекта 1 (пример) -->
+                    <div class="project-card">
+                        <div class="project-card__image">
+                            <img src="https://via.placeholder.com/300x200" alt="Скриншот проекта">
+                        </div>
+                        <h3 class="project-card__title">Словарь японского</h3>
+                        <p class="project-card__desc">Веб-приложение для изучения хираганы с карточками и поиском.</p>
+                        <div class="project-card__tags">
+                            <span>HTML</span><span>CSS</span><span>JS</span>
+                        </div>
+                        <a href="#" class="btn btn--small">Посмотреть</a>
+                    </div>
+                    <!-- Ещё карточки -->
+                    <div class="project-card">
+                        <div class="project-card__image">
+                            <img src="https://via.placeholder.com/300x200" alt="Скриншот проекта">
+                        </div>
+                        <h3 class="project-card__title">Табы на JS</h3>
+                        <p class="project-card__desc">Компонент переключения вкладок (см. демо ниже).</p>
+                        <div class="project-card__tags">
+                            <span>JS</span><span>CSS</span>
+                        </div>
+                        <a href="#" class="btn btn--small">Посмотреть</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Демо компонентов -->
+        <section id="demos" class="demos">
+            <div class="container">
+                <h2 class="section-title">JS-компоненты</h2>
+
+                <!-- Табы -->
+                <div class="demo-block">
+                    <h3>Табы (переключение категорий)</h3>
+                    <div class="tabs">
+                        <div class="tabs__nav">
+                            <button class="tabs__btn active" data-tab="tab1">HTML</button>
+                            <button class="tabs__btn" data-tab="tab2">CSS</button>
+                            <button class="tabs__btn" data-tab="tab3">JavaScript</button>
+                        </div>
+                        <div class="tabs__content">
+                            <div class="tabs__pane active" id="tab1">
+                                <p>Семантическая вёрстка, доступность, формы, мета-теги.</p>
+                            </div>
+                            <div class="tabs__pane" id="tab2">
+                                <p>Flexbox, Grid, анимации, адаптивный дизайн, переменные.</p>
+                            </div>
+                            <div class="tabs__pane" id="tab3">
+                                <p>Манипуляции с DOM, события, табы, аккордеон, localStorage.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Аккордеон -->
+                <div class="demo-block">
+                    <h3>Аккордеон (часто задаваемые вопросы)</h3>
+                    <div class="accordion">
+                        <div class="accordion__item">
+                            <div class="accordion__header">Где ты учишься?</div>
+                            <div class="accordion__body">
+                                <p>Самостоятельно по книгам, видео и с помощью моего цифрового брата 😊</p>
+                            </div>
+                        </div>
+                        <div class="accordion__item">
+                            <div class="accordion__header">Какие технологии осваиваешь?</div>
+                            <div class="accordion__body">
+                                <p>HTML, CSS, JavaScript, React (в планах), Git, работа с API.</p>
+                            </div>
+                        </div>
+                        <div class="accordion__item">
+                            <div class="accordion__header">Планируешь ли искать работу?</div>
+                            <div class="accordion__body">
+                                <p>Да, после того как соберу несколько полноценных проектов в портфолио.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Контакты -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Контакты</h2>
+                <div class="contact__links">
+                    <a href="mailto:alexey@example.com" class="contact__link">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                    <a href="https://github.com/tvoy-github" target="_blank" class="contact__link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="#" target="_blank" class="contact__link">
+                        <i class="fab fa-telegram"></i> Telegram
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Алексей</p>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
